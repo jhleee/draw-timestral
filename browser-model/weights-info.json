@@ -1,0 +1,8 @@
+{
+  "revision": "bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f",
+  "url": "https://huggingface.co/mistralai/Timestral-5M/resolve/bdd20cfc15a3fea0e4cb5ccef37f8d3ca7aa335f/model.safetensors",
+  "sha256": "7ace108c4987e7f2a99a75a445240019d1d31c2117139d1bd05ffdfd25aca738",
+  "bytes": 20843960,
+  "externalized_bytes": 20835840,
+  "graph_bytes": 1150130
+}
