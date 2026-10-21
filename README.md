@@ -43,9 +43,9 @@ npm run build:pages
 - 원본 PyTorch ↔ 네이티브 ONNX: 9종 입력에서 최대 절대 차이 약 `7.2e-7` 이하.
 - 실제 ONNX Runtime Web WASM ↔ 원본 PyTorch: 다섯 곡선에서 최대 절대 차이 약 `1.02e-6` 이하.
 - 로컬 Node WASM 측정: 약 11–34ms. 모바일 브라우저의 보장 성능이 아닙니다.
-- 리샘플링·입력 제약·선형 기준·지표 테스트 5개 통과.
+- 리샘플링·입력 제약·선형 기준·지표 및 터치 이벤트 처리 테스트 7개 통과.
 
-상세 수치는 `browser-model/equivalence.json`, `browser-model/wasm-equivalence.json`에 있습니다. 실제 모바일 기기의 드로잉·렌더링은 별도 검증이 필요합니다. 로딩 또는 추론에 실패하면 오류를 표시하며 가짜 예측을 생성하지 않습니다.
+상세 수치는 `browser-model/equivalence.json`, `browser-model/wasm-equivalence.json`에 있습니다. 터치는 네이티브 Touch Events와 non-passive 리스너, 마우스·펜은 Pointer Events로 처리합니다. 식별자 0인 터치, 중복 Pointer Events, 다른 손가락 종료, 터치 취소, 포인터 캡처 실패를 자동 검증했습니다. 실제 모바일 기기의 드로잉·렌더링은 별도 검증이 필요합니다. 로딩 또는 추론에 실패하면 오류를 표시하며 가짜 예측을 생성하지 않습니다.
 
 ## 모델 출처와 라이선스
 
